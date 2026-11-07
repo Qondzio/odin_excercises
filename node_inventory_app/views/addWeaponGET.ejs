@@ -1,0 +1,40 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="../images/Fortnite_S1.webp">
+    <title>Fortnite weapons</title>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="/weapons/<%=weaponType %>"><img src="/images/back.png" alt="back" width="40px" height="40px"></a>
+            <h1>Add a weapon</h1>
+        </header>
+        <form action="/addWeapon/<%=weaponType %>" method="post">
+            <span>
+                <label for="weaponName">Weapon name</label>
+                <input type="text" name="weaponName" id="weaponName">
+            </span>
+            <span>
+                <label for="rarity">Rarity</label>
+                <select name="rarity" id="rarity" onchange="this.style.color=this.options[this.selectedIndex].style.color">
+                    <option value="1" style="color: grey;">Common</option>
+                    <option value="2" style="color: green;">Uncommon</option>
+                    <option value="3" style="color: blue;">Rare</option>
+                    <option value="4" style="color: purple;">Epic</option>
+                    <option value="5" style="color: orange;">Legendary</option>
+                </select>
+            </span>
+            <span>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="30" rows="5"></textarea>
+            </span>
+            <span>
+                <label for="imageURL">Image URL</label>
+                <textarea name="imageURL" id="imageURL" class="imageURL" cols="40" rows="4"></textarea>
+            </span>
+            <button type="submit" class="submit">Submit</button>
+        </form>
+    </main>
+</body>

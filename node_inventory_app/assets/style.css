@@ -1,0 +1,175 @@
+@font-face {
+  font-family: fortniteFont;
+  src: url('./Burbank\ Big\ Condensed\ Black.otf');
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+body {
+  background: url('./images/background.jpg') no-repeat center center;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  font-family: fortniteFont;
+  text-align: center;
+}
+h1{
+    color: white;
+    font-size: 4rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.categories{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.categories a{
+    text-decoration: none;
+}
+.category, .add_category{
+    border: 1px solid white;
+    border-radius: 15px;
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.category img{
+    width: 100%;
+}
+.category p{
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+.category:hover, .add_category:hover{
+    background-color: rgba(255, 255, 255, 0.356);
+    cursor: pointer;
+}
+table{
+    color: white;
+    text-align: center;
+    border-spacing: 0px;
+}
+th{
+    padding: 0 20px;
+}
+td img{
+    height: 100px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header a{
+    position: absolute;
+    left: 0;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.menu_right{
+    display: flex;
+}
+.add{
+    padding: 5px 25px;
+    border-radius: 5px;
+    font-size: 3rem;
+    border: 1px solid white;
+    color: white;
+}
+.add:hover{
+    background-color: rgba(240, 248, 255, 0.384);
+}
+form{
+    padding: 0 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items:first baseline;
+    gap: 20px;
+}
+span{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+label{
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+input{
+    font-size: 2rem;
+    font-family: fortniteFont;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+select{
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    font-family: fortniteFont;
+    font-size: 1.5rem;
+    color: grey;
+}
+textarea{
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.imageURL{
+    font-size: 0.8rem;
+}
+.submit{
+    padding: 5px 25px;
+    border-radius: 5px;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    border: none;
+    background-color: green;
+    font-family: fortniteFont;
+    cursor: pointer;
+}
+.submit:hover{
+    background-color: rgba(0, 128, 0, 0.767);
+}
+.delete_weapon{
+    color: red;
+    font-size: 2rem;
+    padding: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: fortniteFont;
+}
+tr:hover{
+    background-color: rgba(240, 248, 255, 0.534);
+}
+.add_category{
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+.plus{
+    font-size: 3rem;
+    margin: 0;
+}

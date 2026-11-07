@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="./images/Fortnite_S1.webp">
+    <title>Fortnite weapons</title>
+</head>
+<body>
+    <main>
+
+            <h1>Fortnite weapons</h1>
+
+        <div class="categories">
+            <% categories.map((category)=>{ %>
+                <a href="/weapons/<%=category.id %>">
+                    <div class="category">
+                        <img src="<%=category.imageurl || '/images/' + category.name +'.png' %>" alt="<%= category.name %>">
+                        <p><%= category.name %></p>
+                    </div>
+                </a>
+            <% }) %>
+        </div>
+        <a href="/addCategory">
+            <div class="add_category">
+                <p class="plus">+</p>
+                <p>Add category</p>
+            </div>
+        </a>
+    </main>
+</body>
+</html>

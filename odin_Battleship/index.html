@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="info">FIRST WHO WILL DESTROY ALL SHIPS WINS! <br>
+        🟨 - Ship missed <br>
+        🟥 - Ship hitted <br>
+        🔥 - Ship destroyed
+    </h1>
+    <h1 class="gameInfo">Place your ships!</h1>
+
+    <main>
+        <div class="choose">
+            <h2>Select a ship to place:</h2>
+            <div class="ships">
+                <span class="selectShip selectedShip">
+                    <p>Extra:</p>
+                    <div class="shipPreview">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </span>
+                <span class="selectShip">
+                    <p>Large:</p>
+                    <div class="shipPreview">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </span>
+                <span class="selectShip">
+                    <p>Big:</p>
+                    <div class="shipPreview">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </span>
+                <span class="selectShip">
+                    <p>Medium:</p>
+                    <div class="shipPreview">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </span>
+                <span class="selectShip">
+                    <p>Small:</p>
+                    <div class="shipPreview">
+                        <span></span>
+                    </div>
+                </span>
+            </div>
+            <div class="buttons">
+                <button id="rotate">Rotate</button>
+                <button id="start">Start game</button>
+            </div>
+        </div>
+        <div class="mainLeft">
+            <h2 class="boardInfo">Your fleet</h2>
+            <div class="playerGameboard">
+            
+            </div>
+        </div>
+        <div class="mainRight">
+            <h2 class="boardInfo">Computer fleet</h2>
+            <div class="computerGameboard">
+            
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="control.js"></script>
+</body>
+</html>

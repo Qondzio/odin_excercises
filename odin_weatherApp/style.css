@@ -1,0 +1,150 @@
+html{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background: url('./images/background.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+header{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1{
+    font-size: 2rem;
+}
+header input{
+    outline: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.5rem;
+}
+header button{
+    border-radius: 15px;
+    border: none;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+form{
+    width: 70%;
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+.form_bad{
+    border:2px solid red;
+}
+.city_weather{
+    margin-top: 100px;   
+}
+.city_weather h1,h2{
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    margin: 0;
+    text-transform: capitalize;
+}
+#temperature{
+    font-size: 5rem;
+}
+#weather{
+    font-size: 1.5rem;
+}
+.weather_day, .weather_week{
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    background: rgba(8, 8, 8, 0.2);
+    width: 38%;
+    margin-top: 50px;
+    padding: 5px 10px;
+}
+.weather_week{
+    width: auto;
+    margin-bottom: 50px;
+}
+.weather_day h3, .weather_week h3{
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-transform:uppercase;
+    font-size: 0.9rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+.weather_hourly{
+    display: flex;
+    gap:10px;
+    overflow: auto;
+    padding: 10px 0;
+}
+.weather_hourly::-webkit-scrollbar {
+    height: 10px;
+}
+.weather_hourly::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 10px;
+}
+.weather_hourly::-webkit-scrollbar-thumb {
+    background-color: rgb(20, 166, 224);
+    border-radius: 10px;
+}
+.weather_hourly::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(40, 131, 235);
+}
+.weather{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.weather h4, h5{
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+.weather h4{
+    font-size: 1.5rem;
+}
+.weather_10days{
+    display: flex;
+    flex-direction: column;
+}
+.weather_10days span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid white;
+    padding: 10px 0px;
+    color: white;
+}
+.weather_10days span h5:nth-child(2){
+    width: 120px;
+}
+#temperatureRange{
+    display: flex;
+    align-items: center;
+    gap:5px;
+    margin-left: 20px;
+}
+#divider{
+    width: 50px;
+    margin:0;
+    border-bottom: 1px solid white;
+}

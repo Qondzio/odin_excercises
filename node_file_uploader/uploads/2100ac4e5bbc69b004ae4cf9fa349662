@@ -1,0 +1,25 @@
+Server is running on port 2000
+{
+  asset_id: '5a936e0e7d65bab3685902a94b6338b7',
+  public_id: 'project/s2kmaou0ipg5ttrnt7xh',
+  version: 1763913633,
+  version_id: 'a3e1e080d4c09f5887dda1159820cd51',
+  signature: 'dfcd98676becdae5d87197992ed80222f8e738a6',
+  width: 512,
+  height: 512,
+  format: 'webp',
+  resource_type: 'image',
+  created_at: '2025-11-23T16:00:33Z',
+  tags: [],
+  pages: 1,
+  bytes: 34254,
+  type: 'upload',
+  etag: '5a54b753d964e56e546284580dee3e99',
+  placeholder: false,
+  url: 'http://res.cloudinary.com/dnai9elka/image/upload/v1763913633/project/s2kmaou0ipg5ttrnt7xh.webp',
+  secure_url: 'https://res.cloudinary.com/dnai9elka/image/upload/v1763913633/project/s2kmaou0ipg5ttrnt7xh.webp',
+  asset_folder: 'project',
+  display_name: 's2kmaou0ipg5ttrnt7xh',
+  original_filename: '6bd66a4ad642d7e5b9823aaeb332a76b',
+  api_key: '879972169785949'
+}

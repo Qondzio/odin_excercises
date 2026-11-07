@@ -1,0 +1,119 @@
+<div class="files-list">
+    <%if(locals.params){ %>
+        <span>
+            <h2>Files inside directory: "<%=locals.params.directory %>"</h2>
+            <button onclick="showFilesPoput()">Add files +</button>
+        </span>
+        <div class="files-overlay">
+            <div class="add-files-poput">
+                <img src="/images/close.svg" alt="close-icon" class="close-icon-files">
+                <h1>Add files</h1>
+                <p>Acceptable formats: .pdf, .png, .jpg, .svg, .jpeg</p>
+                <form action="/addFile/<%=params.directory %>" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" placeholder="+" multiple accept=".pdf, .png, .jpg, .svg, .jpeg" required>
+                    <button type="submit">+</button>
+                </form>
+            </div>
+        </div>
+        <% if(locals.files.length<=0){ %>
+            <h2 class="empty-dir">Directory is empty</h2>
+        <%} else{ %>
+            <div class="files">
+                <%locals.files.forEach(file=>{ %>
+                    <div class="file" onclick="showFile('<%=file.name%>','<%=file.type%>','<%=file.size%>','<%=file.urlDownload%>','<%=file.url%>','<%=file.publicID%>')">
+                        <img src="<%=file.url %>" alt="file-icon">
+                        <p><%=file.name %> </p>
+                    </div>
+                <%}) %>
+            </div>
+            <div class="file-overlay">
+                <div class="file-info">
+                    <img src="/images/close.svg" alt="close-icon" class="close-icon-file">
+                    <h1>File info</h1>
+                    <span>
+                        <span class="file-info-right">
+                            <div>
+                                <p>Name:</p>
+                                <p id="file-name"></p>
+                            </div>
+                            <div>
+                                <p>Format:</p>
+                                <p id="file-format"></p>
+                            </div>
+                            <div>
+                                <p>Size(bytes):</p>
+                                <p id="file-size"></p>
+                            </div>
+                        </span>
+                    </span>
+                    <img class="preview" src="" alt="preview-icon">
+                    <div class="buttons">
+                        <form id="deleteForm" method="post">
+                            <button type="button" id="deleteButton">Delete file</button>
+                        </form>
+                        <button type="button" id="downloadButton">Download</button>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    <% }else{ %>
+        <h2><- Please select directory to display</h2>
+    <%} %>
+</div>
+
+
+<script>
+function showFilesPoput(){
+        const poput=document.querySelector('.files-overlay');
+        const x=document.querySelector('.close-icon-files')
+        poput.style.display='block';
+        poput.addEventListener('click', ()=>{
+            if(event.target === poput){
+                poput.style.display='none';
+            }
+        })
+        x.addEventListener('click', ()=>{
+            poput.style.display='none';
+        })
+    }
+function showFile(name,type,size,url,preview, publicID){ 
+    console.log(name,type,size,url);
+    const x=document.querySelector('.close-icon-file');
+    const overlay=document.querySelector('.file-overlay');
+    overlay.style.display='block';
+    
+    document.getElementById('file-name').textContent=name;
+    document.getElementById('file-format').textContent=type;
+    document.getElementById('file-size').textContent=size;
+    document.querySelector('.preview').src=preview;
+
+    x.addEventListener('click', ()=>{
+            overlay.style.display='none';
+    })
+
+    overlay.addEventListener('click', ()=>{
+            if(event.target === overlay){
+                overlay.style.display='none';
+            }
+    })
+
+    document.getElementById('downloadButton').addEventListener('click', ()=>{
+    const a = document.createElement("a");
+    a.href = url;
+    a.click();
+    a.remove()
+    })
+
+    document.getElementById('deleteButton').addEventListener('click', ()=>{
+        deleteFile(publicID);
+    })
+
+}
+
+function deleteFile(publicID){
+    const form=document.getElementById('deleteForm');
+    form.action='/deleteFile/'+publicID;
+    form.submit();
+}
+
+</script>

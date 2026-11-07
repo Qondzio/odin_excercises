@@ -1,0 +1,14 @@
+<header>
+    <span>
+        <img src="/images/website-icon.png" alt="website-icon" width="auto" height="40px">
+        <h1>FileHoster</h1>
+    </span>
+    <% if(locals.user) { %>
+        <span>
+            <p style="color: white; font-size: 1.5rem; font-weight: 500;">Welcome '<%= locals.user.username %>'</p>
+            <img src="/images/logout-icon.svg" alt="logout-icon" onclick=window.location.href='/log-out' style="cursor: pointer;">
+        </span>
+    <% } else { %>
+        <img src="/images/login-icon.svg" alt="login-icon" onclick=window.location.href='/' style="cursor: pointer;">
+    <% } %>
+</header>

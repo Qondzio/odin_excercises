@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: Roboto;
+    margin: 0;
+}
+
+header{
+    padding: 4% 6%;
+    position: relative;
+}
+
+.background{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2596be;
+    transform: skewY(-10deg);
+    transform-origin: top left;
+}
+
+.intro{
+    display: flex;
+}
+
+.portrait{
+    background: url("./images/portrait.jpg");
+    text-align: center;
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column-reverse;
+    background-size:cover;
+    box-shadow: 0px 10px 10px 0px rgba(5, 5, 5, 0.226);
+}
+
+.portrait p{
+    color: white;
+    font-size: 6rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    font-weight: lighter;
+    text-align: center;
+}
+
+.about_me{
+    flex: 0 0 55%;
+    background-color: white;
+    padding: 0 3%;
+    margin: 5% 0;
+    box-sizing: border-box;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.about_me h3{
+    font-size: 4rem;
+    font-weight: 200;
+    margin: 5% 0;
+}
+
+.about_me p{
+    font-size: 2rem;
+    color: rgb(100, 98, 98);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.social_media{
+    display: flex;
+    gap: 4%;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 3% 0;
+}
+
+.social_media i{
+    font-size: 46px;
+    padding: 5% 0;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 8% 6%;
+    gap: 30px;
+}
+
+section h2{
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 80px;
+}
+
+.project{
+    box-shadow: 3px 3px 11px -4px rgba(12, 12, 12, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.project_info{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    gap: 20px;
+}
+
+.project_info p{
+    font-size: 1.4rem;
+    color: rgb(100, 98, 98);
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.screenshot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20% 4%;
+    text-align: center;
+    background-color: #982c24;
+}
+
+.screenshot p{
+    font-size: 4.5em;
+    color: white;
+}
+
+.project_name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project_name h4{
+    font-size: 2rem;
+    font-weight:lighter;
+}
+
+.project_name span{
+    font-size: 35px;
+    display: flex;
+    gap: 20px;
+}
+
+footer{
+    background-color: #408cb4;
+    padding: 4% 6%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 40%;
+}
+
+footer img{
+    width: 60%;
+    height: auto;
+}
+
+.contact h4{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.contact p, .address{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.contact_info{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.contact_info img{
+    width: 32px;
+    height: 32px;
+}
+
+.phone_email{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.socials{
+    display: flex;
+    gap: 30px;
+}
+
+.socials i{
+    font-size: 42px;
+    color: black;
+}
+
+
+@media (min-width: 500px) and (max-width:1050px){
+    .intro{
+        display: block;
+    }
+    
+    .portrait{
+        position: relative;
+        width: 350px;
+        height: 400px;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: -60px;
+    }
+
+    .portrait p{
+        position: absolute;
+        top: 0;
+        right: -105%;
+        font-size: 4rem;
+        margin-top: 20px;
+    }
+
+    .about_me{
+        position: relative;
+        z-index: -1;
+        transform: scale(85%);
+        padding: 8% 5%;
+        top: 70px;
+    }
+
+    .about_me h3{
+        font-size: 3rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .about_me p{
+        font-size: 1.5rem;
+    }
+
+    .social_media{
+        display: none;
+    }
+
+    .background{
+        height: 70%;
+    }
+
+    .projects{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+        row-gap: 70px;
+    }
+
+    .screenshot p{
+        font-size: 3rem;
+    }
+
+    .project_name h4{
+        font-size: 1.8rem;
+    }
+
+    .project_name span{
+        font-size: 28px;
+    }
+
+    section{
+        padding-bottom: 350px;
+    }
+
+    footer{
+        padding-bottom: 10%;
+    }
+
+    footer img{
+        width: 45%;
+        object-fit: cover;
+        object-position: 52%;
+    }
+
+    .contact{
+        padding: 8% 0;
+        width: 55%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .intro {
+    flex-direction: column;
+    }
+
+    header{
+        padding: 2% 2%;
+    }
+
+    .background{
+        height: 30%;
+        transform: skewY(330deg);
+    }
+
+    .portrait{
+    height: 500px;
+    flex: none;
+    margin: 4% 6%;
+    }
+
+    .portrait p{
+    text-align: left;
+    font-size: 5.5rem;
+    padding-left: 4%;
+    }
+
+    .about_me{
+        box-shadow: none;
+    }
+
+    .about_me h3{
+        text-align: center;
+    }
+
+    .social_media{
+        justify-content: center;
+    }
+
+    .projects{
+        grid-template-columns: 1fr;
+    }
+
+    section h2{
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    section{
+        padding-bottom: 250px;
+        padding-top: 100px;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .contact{
+        width: 90%;
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+    .contact p{
+        font-size: 1.2rem;
+    }
+
+    .contact h4{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .socials{
+        justify-content: center;
+    }
+
+    footer img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: 60%;
+    }
+}

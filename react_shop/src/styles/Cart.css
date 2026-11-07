@@ -1,0 +1,128 @@
+.cartPage{
+    grid-template-columns: 2fr 1fr;
+    display: grid;
+    margin: 0 18%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    column-gap: 30px;
+    flex:1;
+}
+.cartPage h1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.cartInfo{
+    display: flex;
+}
+.cartLeft{
+    display: flex;
+    flex-direction: column;
+    grid-row-start: 2;
+}
+.cartLeft h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.cartItems{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.cartItem{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid rgb(196, 190, 190);
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.cartItemInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 100%;
+}
+.cartItemInfo p{
+    margin: 0;
+}
+.cartItems img{
+    width: 128px;
+    height: 128px;
+}
+.itemPrice{
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+.cartEmpty{
+    font-size: 2rem;
+    grid-row-start: 2;
+}
+html, body, #root{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.itemActions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+.itemActions .trashIcon{
+    width: 25px;
+    height: 25px;
+}
+.itemAmount{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.itemAmount .plus, .itemAmount .minus{
+    flex: 1;
+}
+.itemQuantity{
+    flex:2;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px 25px;
+}
+.minus, .plus{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+.subtotal{
+    margin: 0;
+}
+.cartRight{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(196, 190, 190);
+    grid-row-start: 2;
+    border-radius: 10px;
+    max-height: 350px;
+    gap: 15px;
+    
+}
+.cartRight span p{
+    margin: 0;
+}
+.cartRight button{
+    background-color: white;
+    outline: none;
+    border: 1px solid rgb(196, 190, 190);
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.cartRight span{
+    display: flex;
+    justify-content: space-between;
+}
+.itemActions .trashIcon{
+    cursor: pointer;
+}

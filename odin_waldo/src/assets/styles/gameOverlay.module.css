@@ -1,0 +1,57 @@
+.gameOverlay{
+    margin: 0 5%;
+    position: relative;
+}
+.gameOverlay img{
+    width: 100%;
+    cursor: pointer;
+}
+.selectedPosition{
+    background-color: rgba(255, 0, 0, 0.651);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.selectHero{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    transform: translate(-25px, -25px);
+    opacity: 0;
+    animation: opacityOne 0.5s forwards;
+    max-height: fit-content;
+    cursor: pointer;
+}
+.selectHero span:hover{
+    background-color: rgb(141, 141, 248);
+}
+.selectHero span{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px;
+    transition: 0.1s;
+}
+.selectHero span p{
+    margin: 0;
+}
+.selectHero img{
+    width: 32px;
+    height: 32px;
+}
+.displayPoput {
+    display: flex;
+    position: absolute;
+}
+
+@keyframes opacityOne {
+    to{
+        opacity:1;
+    }
+}
+.waldo{
+    position: absolute;
+    border: 1px solid blue;
+    background-color: red;
+}

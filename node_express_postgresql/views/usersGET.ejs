@@ -1,0 +1,9 @@
+<div>
+    <h1>Users:</h1>
+    <ul>
+        <% result.map((item)=>{ %>
+            <li>ID:<%= item.id %>, <%=item.username %></li>
+        <% }) %>
+    </ul>
+    <button onclick="window.location.href='/new'">Add user</button>
+</div>

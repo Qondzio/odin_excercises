@@ -1,0 +1,60 @@
+.form-section{
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.form-section h4{
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+input, select{
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 5px 10px;
+    outline: none;
+}
+textarea{
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+    width: 300px;
+    padding: 15px;
+}
+.years{
+    display: flex;
+    gap: 20px;
+}
+
+.years span{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.cvPrepare{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    padding: 2% 4%;
+}
+button{
+    margin: 0px auto;
+    margin-top: 30px;
+    color: white;
+    background-color: rgb(7, 204, 7);
+    border:2px solid rgb(50, 134, 24);
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

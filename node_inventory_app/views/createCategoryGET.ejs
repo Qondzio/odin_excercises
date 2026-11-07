@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="../images/Fortnite_S1.webp">
+    <title>Fortnite weapons</title>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="/"><img src="/images/back.png" alt="back" width="40px" height="40px"></a>
+            <h1>Add a category</h1>
+        </header>
+        <form action="/addCategory" method="post">
+            <span>
+                <label for="categoryName">Category name</label>
+                <input type="text" name="categoryName" id="categoryName">
+            </span>
+            <span>
+                <label for="imageURL">Image URL</label>
+                <textarea name="imageURL" id="imageURL" class="imageURL" cols="40" rows="4"></textarea>
+            </span>
+            <button type="submit" class="submit">Submit</button>
+        </form>
+    </main>
+</body>

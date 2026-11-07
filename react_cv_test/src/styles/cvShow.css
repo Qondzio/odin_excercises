@@ -1,0 +1,59 @@
+.cvShow{
+    flex:1;
+    padding: 2% 15%;   
+}
+.cv{
+    background-color: white;
+    padding: 8%;
+    box-sizing: border-box;
+    height: 100%;
+}
+.basicInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.mainInfo{
+    display: flex;
+    gap: 20px;
+}
+.basicInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.basicInfo span{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.basicInfo span p{
+    margin: 0;
+}
+.experience{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.education{
+    border-right: 1px solid grey;
+    flex: 0.4;
+}
+.work{
+    flex: 0.6;
+}
+
+.work, .education{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.workInfo p{
+    margin-top: 20px;
+}
+.educationInfo h3, .workInfo h3{
+    margin: 10px 0;
+}
+.educationInfo h4, .workInfo h4{
+    margin: 10px 0;
+    font-weight: 400;
+}

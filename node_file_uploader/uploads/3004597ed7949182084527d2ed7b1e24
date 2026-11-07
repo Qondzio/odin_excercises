@@ -1,0 +1,28 @@
+CREATE TABLE category (
+    id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL
+);
+
+CREATE TABLE rarity (
+    id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100) NOT NULL,
+    color VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE weapons (
+    id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100) NOT NULL,
+    category_id INTEGER NOT NULL REFERENCES category(id),
+    rarity_id INTEGER NOT NULL REFERENCES rarity(id),
+    description TEXT
+);
+
+
+
+
+INSERT INTO category (name, description) VALUES ('Pistol', 'Good for short range'), ('Rifle', 'Good for middle and long range'), ('Shotgun', 'Perfect at close range'), ('SMG', 'Great at short range'), ('Sniper', 'Excellent for long range'), ('Explosive', 'Perfect to make some BOOM');
+
+INSERT INTO rarity (name, color) VALUES ('Common', 'grey'), ('Uncommon', 'green'), ('Rare', 'blue'), ('Epic', 'purple'), ('Legendary', 'Orange');
+
+INSERT INTO weapons (name, category_id, rarity_id, description) VALUES ('Veiled Precision', '4', '3', 'Fully automatic scoped and suppressed SMG. Fires at a high rate with high accuracy, dealing moderate damage at short range while quickly consuming the short mag.'),('Holo Twister', '2', '2', 'Scoped automatic Assault Rifle. Moderate rate of fire, very easy to control, and effective in a variety of combat scenarios.'), ('Tactical Shotgun', '3', '4', 'Shotgun: Semi-Automatic. Fast-firing shotgun with a large magazine. Good for dealing with multiple targets at short range.'), ('Compact SMG', '4', '5', 'Fires at a very high rate, dealing great damage while consuming a lot of ammo.'), ('Bolt-Action Sniper Rifle', '5', '4', 'Powerful and accurate rifle with a bolt-action mechanism that results in a reliable but slow rate of fire.'), ('Heavy Sniper Rifle', '5', '5', 'Powerful and accurate rifle with a bolt-action mechanism with an extremely slow reload.'), ('Hunting Rifle', '5', '2', 'Powerful and accurate rifle with a bolt-action mechanism that results in a reliable but slow rate of fire.'), ('Spas Shotgun', '3', '5', 'Deals high damage at a moderate fire rate. Short range and limited magazine size.'), ('Suppressed Pistol', '1', '3', 'Versatile sidearm with moderate damage, good rate of fire and large magazine.'), ('Hand Cannon', '1', '4', 'Large-caliber sidearm with heavy damage, decent magazine size, and slow rate of fire.'), ('Grenade Launcher', '6', '4', 'Lobs rockets that damage everything in an area.'), ('Pumpkin Launcher', '6', '5', 'Fires long-range rockets that damage enemies in an area.'), ('Submachine Gun', '4', '2', 'Fires at a very high rate, dealing great damage while consuming a lot of ammo.'), ('Heavy Shotgun', '3', '5', 'Pump shotgun with a large magazine. Fires slugs for medium-range effectiveness.'), ('Scar Assault Rifle', '2', '5', 'Fully Automatic, flexible assault rifle capable of handling all types of combat scenarios.'), ('Heavy Assault Rifle', '2', '5', 'Fully Automatic, A heavy weapon with high damage, but an extremenly low fire rate'), ('O.X.R. Rifle', '2', '3', 'Fully automatic, versatile assault rifle with reliable precision and range.'), ('Modular Frenzy Auto Shotgun', '3', '1', 'Fast firing automatic shotgun. Deals considerable damage at close range, and requires a lengthy reload.'), ('Semi-Auto Pistol', '1', '1', 'Semi-Automatic. Versatile sidearm with moderate damage, good rate of fire and large magazine.'), ('Burst Assault Rifle', '2', '1', 'Burst-fire. A versatile rifle that rewards careful aim and can be fired in short bursts.'), ('Drum Gun', '2', '3', 'A heavy weapon with high damage, an extreme rate of fire, and a huge magazine size. Very inaccurate unless aiming down sights from a fixed position, and firing in short bursts.');

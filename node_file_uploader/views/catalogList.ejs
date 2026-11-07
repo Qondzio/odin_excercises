@@ -1,0 +1,44 @@
+<main>
+    <div class="catalog-list">
+        <h3>Your directories:</h3>
+        <% if(locals.directories.length>0){ 
+            locals.directories.forEach(directory =>{ %>
+                <div class="directory" onclick="window.location.href='/files/<%=locals.user.username %>/<%=directory.name %>'">
+                    <p><%=directory.name %></p>
+                </div>
+            <%})}else{%>
+            <p>Your directory list is empty</p>
+        <%} %>
+        <button class="add-directory" onclick=showDirectoryPoput()>Add directory +</button>
+    </div>
+    <%- include('files.ejs') %>
+</main>
+
+<div class="popup-overlay">
+    <div class="add-directory-poput">
+        <img src="/images/close.svg" alt="close-icon" class="close-icon">
+        <h1>Add directory</h1>
+        <form action="/addDirectory" method="post">
+            <input type="text" name="directoryName" placeholder="Enter category name" required>
+            <button type="submit">+</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function showDirectoryPoput(){
+        const poput=document.querySelector('.popup-overlay');
+        const x=document.querySelector('.close-icon')
+        poput.style.display='block';
+        poput.addEventListener('click', ()=>{
+            if(event.target === poput){
+                poput.style.display='none';
+            }
+        })
+        x.addEventListener('click', ()=>{
+            console.log('ezez');
+            
+           poput.style.display='none';
+        })
+    }
+</script>

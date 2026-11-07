@@ -1,0 +1,71 @@
+@font-face {
+    font-family: waldoFont;
+    src: url(../fonts/waldoFont.ttf);
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.397);
+    gap: 10px;
+    position: relative;
+}
+header span{
+    display: flex;
+    font-size: 2.5rem;
+    font-family: waldoFont;
+    gap: 10px;
+    cursor: pointer;
+}
+.blue{
+    color: blue;
+    margin: 0;
+}
+.red{
+    color: red;
+    margin: 0;
+}
+.header_img{
+    width: 80px;
+    height: 80px;
+}
+.characters{
+    position: absolute;
+    left: 0;
+    margin-left: 10%;
+    display: flex;
+    gap: 20px;
+}
+.popup, .popup_false, .game_won_popup{
+    background-color: rgb(5, 126, 5);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    animation: opacityDown 2s forwards;
+}
+
+.popup_false{
+    background-color: rgb(155, 21, 21);
+}
+
+.game_won_popup{
+    background-color: rgb(206, 172, 59);
+}
+
+.popups{
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,0);
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+@keyframes opacityDown {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0}
+}

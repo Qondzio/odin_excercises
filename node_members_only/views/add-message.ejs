@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SECRET ADMIN</title>
+</head>
+<body>
+    <% if(locals.user) { %>
+        <div class="add-message">
+        <h1>Add a message</h1>
+        <form action="/addMessage" method="post">
+            <textarea name="message" style="resize: none;" id="message" cols="40" rows="10"></textarea>
+            <button type="submit">Add message</button>
+        </form>
+        </div>
+    <%} else{%>
+        <div class="admin">
+            <h1>You must first log-in to the website</h1>
+            <button onclick=window.location.href='/sign-in'>Proceed to the log-in page</button>
+        </div>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Find a weather for your city:</h1>
+        <form class="elo" id="form">
+            <input type="text" id="city" placeholder="Enter city name">
+            <button>
+                <img src="./images/magnify.svg" alt="find_icon" width="32px" height="32px">
+            </button>
+        </form>
+    </header>
+    
+    <div class="city_weather">
+        <h1 id="city_name"></h1>
+        <h1 id="temperature"></h1>
+        <h2 id="weather"></h2>
+    </div>
+
+    <div class="weather_day">
+        <h3>Hourly forecast</h3>
+        <div class="weather_hourly">
+
+        </div>
+    </div>
+
+    <div class="weather_week">
+        <h3>10-day forecast</h3>
+        <div class="weather_10days">
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
